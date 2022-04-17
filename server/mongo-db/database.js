@@ -1,5 +1,6 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import {MongoClient} from "mongodb";
 import dotenv from "dotenv"
 
@@ -14,6 +15,8 @@ mongoClient.connect().then(() => {
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 import {MongoClient} from "mongodb";
 import dotenv from "dotenv"
 
@@ -26,6 +29,10 @@ mongoClient.connect().then(() => {
 });
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+export {mongoClient};
+>>>>>>> Stashed changes
+=======
 export {mongoClient};
 >>>>>>> Stashed changes
 =======

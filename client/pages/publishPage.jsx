@@ -1,5 +1,6 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import {useContext, useState} from "react";
 import {ArticleApiContext} from "../apiContext/articleApiContext";
 import {useNavigate} from "react-router-dom";
@@ -70,6 +71,8 @@ export function PublishPage() {
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 import {useContext, useState} from "react";
 import {ArticleApiContext} from "../apiContext/articleApiContext";
 import {useNavigate} from "react-router-dom";
@@ -128,6 +131,9 @@ export function PublishPage() {
         </div>
     );
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

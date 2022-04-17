@@ -1,5 +1,6 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import {mongoClient} from "../mongo-db/database.js";
 
 async function getArticles(req, res, mongoDb){
@@ -42,6 +43,8 @@ export {getArticles, createArticle, deleteArticle}
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 import {mongoClient} from "../mongo-db/database";
 
 async function getArticles(req, res){
@@ -66,6 +69,10 @@ async function createArticle(req, res){
     }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+export {getArticles, createArticle}
+>>>>>>> Stashed changes
+=======
 export {getArticles, createArticle}
 >>>>>>> Stashed changes
 =======

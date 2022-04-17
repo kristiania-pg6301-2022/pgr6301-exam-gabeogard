@@ -1,5 +1,6 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import express from "express";
 
 import {createArticle, getArticles, deleteArticle} from "../controllers/articleController.js";
@@ -16,6 +17,8 @@ export const NewsApi = () =>{
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 import express from "express";
 import {createArticle, getArticles} from "../controllers/articleController";
 
@@ -27,6 +30,9 @@ export const NewsApi = () =>{
 
     return router
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

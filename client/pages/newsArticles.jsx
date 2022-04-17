@@ -1,5 +1,6 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import {NavBar, NavBarLogged} from "../components/TopBar";
 import {useContext, useEffect, useState} from "react";
 import {ArticleApiContext} from "../apiContext/articleApiContext";
@@ -134,6 +135,8 @@ export function NewsArticles({user}) {
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 import {NavBar, NavBarLogged} from "../components/TopBar";
 import {useContext} from "react";
 import {ArticleApiContext} from "../apiContext/articleApiContext";
@@ -195,6 +198,9 @@ export function NewsArticles({user}) {
         );
     }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

@@ -1,5 +1,6 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import express from 'express';
 import * as path from "path";
 import {fileURLToPath} from 'url';
@@ -37,6 +38,8 @@ const server = app.listen(process.env.PORT || 3000, () => {
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 import express from 'express';
 import * as path from "path";
 import {fileURLToPath} from 'url';
@@ -72,6 +75,9 @@ const server = app.listen(process.env.PORT || 3000, () => {
     console.log(`Server launched on http://localhost:${server.address().port}`)
     console.log(process.env.GOOGLE_CLIENT_ID)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

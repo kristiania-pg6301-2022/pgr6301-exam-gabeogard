@@ -1,5 +1,6 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import * as React from 'react'
 import {fetchJSON, postJSON} from "../misc/jsonHandler";
 
@@ -16,6 +17,8 @@ export const ArticleApiContext = React.createContext({
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 import * as React from 'react'
 import {fetchJSON, postJSON} from "../misc/jsonHandler";
 
@@ -27,6 +30,9 @@ export const ArticleApiContext = React.createContext({
         return await postJSON("/api/news", article)
     }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

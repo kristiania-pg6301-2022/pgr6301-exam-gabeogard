@@ -1,5 +1,6 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import {NavBar} from "../components/TopBar";
 import {useContext, useEffect, useState} from "react";
 import {LoginApiContext} from "../apiContext/loginApiContext";
@@ -137,6 +138,8 @@ export function LoginPage({config, reload}) {
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 import {NavBar} from "../components/TopBar";
 import {useContext, useEffect, useState} from "react";
 import {LoginApiContext} from "../apiContext/loginApiContext";
@@ -272,6 +275,9 @@ export function LoginPage({config, reload}) {
         </Routes>
     );
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
