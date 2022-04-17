@@ -1,3 +1,5 @@
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 body {
     background-color: #bbbb76;
     font-family: Arial, sans-serif;
@@ -121,4 +123,83 @@ input {
     text-decoration: underline;
     font-weight: bold;
     cursor: pointer;
+=======
+=======
+>>>>>>> Stashed changes
+body{
+    background-color: #bbbb76;
+    font-family: Arial, sans-serif;
+}
+
+
+#nav-bar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkgoldenrod;
+}
+
+.nav-links{
+    float: left;
+}
+
+.nav-links a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-links a:hover:not(.active) {
+    background-color: darkorange;
+}
+.nav-links .active{
+    background-color: darkred;
+}
+
+.nav-links-profile a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-links-profile a:hover:not(.active) {
+    background-color: darkorange;
+}
+.nav-links-profile .active{
+    background-color: darkred;
+}
+
+.nav-links-profile {
+    float: right;
+}
+
+.news-article{
+    background-color: #e09261;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.profile{
+    background-color: #415741;
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.publish-article{
+    background-color: #e09261;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 }

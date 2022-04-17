@@ -1,3 +1,5 @@
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /server/node_modules/
 /node_modules/
 /client/node_modules/
@@ -6,3 +8,19 @@
 /client/.parcel-cache/
 /server/.env
 /server/test.js
+=======
+=======
+>>>>>>> Stashed changes
+/server/node_modules/
+/node_modules/
+/client/node_modules/
+/.idea/
+/client/dist/
+/client/.parcel-cache/
+/server/.env
+<<<<<<< Updated upstream
+./server/build
+>>>>>>> Stashed changes
+=======
+./server/build
+>>>>>>> Stashed changes

@@ -26,6 +26,10 @@
   },
   "homepage": "https://github.com/kristiania-pg6301-2022/pgr6301-exam-gabeogard#readme",
   "devDependencies": {
-    "concurrently": "^7.1.0"
+    "@shelf/jest-mongodb": "^2.2.2",
+    "@types/jest": "^27.5.0",
+    "concurrently": "^7.1.0",
+    "jest": "^28.0.3",
+    "supertest": "^6.2.3"
   }
 }

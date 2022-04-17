@@ -1,5 +1,7 @@
+import fetch from "node-fetch";
 
 export async function postJSON(url, object) {
+    console.log("Posting to URL", url);
     const res = await fetch(url, {
         method: "POST",
         headers: {
@@ -12,10 +14,11 @@ export async function postJSON(url, object) {
     }
 }
 
-export async function fetchJSON(url) {
+export const fetchJSON = async <T extends unknown> (url: string) => {
+    console.log("Fetching from URL", url);
     const res = await fetch(url);
     if (!res.ok) {
         throw new Error(`Failed to load ${res.status}: ${res.statusText}`);
     }
-    return await res.json();
+    return res.json() as T;
 }
