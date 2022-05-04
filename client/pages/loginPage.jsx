@@ -21,7 +21,7 @@ function LoginButton({config, label, provider}) {
             client_id,
             state,
             scope,
-            redirect_uri: `${window.location.origin}/login/google/callback`,
+            redirect_uri: `${window.location.origin}/login/${provider}/callback`,
         }
 
         window.location.href =
