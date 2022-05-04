@@ -1,0 +1,45 @@
+#nav-bar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkgoldenrod;
+}
+
+.nav-links{
+    float: left;
+}
+
+.nav-links a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-links a:hover:not(.active) {
+    background-color: darkorange;
+}
+.nav-links .active{
+    background-color: darkred;
+}
+
+.nav-links-profile a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-links-profile a:hover:not(.active) {
+    background-color: darkorange;
+}
+.nav-links-profile .active{
+    background-color: darkred;
+}
+
+.nav-links-profile {
+    float: right;
+}
