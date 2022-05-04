@@ -1,12 +1,26 @@
-import {NavBar} from "../components/TopBar";
+import {NavBar, NavBarLogged} from "../components/TopBar";
+import {useContext} from "react";
+import {LoginApiContext} from "../apiContext/loginApiContext";
+import {useLoading} from "../misc/useLoading";
 
-export function FrontPage() {
-    return (
-        <div>
-            <NavBar/>
+export function FrontPage({user, reload}) {
+    if (user?.google !== undefined){
+        return (
             <div>
-                <h1>Welcome</h1>
+                <NavBarLogged/>
+                <div>
+                    <h1>Welcome</h1>
+                </div>
             </div>
-        </div>
-    );
+        );
+    }else{
+        return (
+            <div>
+                <NavBar/>
+                <div>
+                    <h1>Welcome</h1>
+                </div>
+            </div>
+        );
+    }
 }

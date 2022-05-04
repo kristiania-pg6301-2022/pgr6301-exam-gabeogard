@@ -1,11 +1,11 @@
-import {NavBar} from "../components/TopBar";
+import {NavBar, NavBarLogged} from "../components/TopBar";
 import {useContext} from "react";
 import {ArticleApiContext} from "../apiContext/articleApiContext";
 import {useLoading} from "../misc/useLoading";
 
 function Article(props) {
     return (
-        <div className={"news-article"}>
+        <div className={"news-article"} key={"article"}>
             <h3>{props.title}</h3>
             <h4>Category - {props.category}</h4>
             <h5>Author - {props.auth}</h5>
@@ -14,7 +14,7 @@ function Article(props) {
     );
 }
 
-export function NewsArticles() {
+export function NewsArticles({user}) {
     const {listArticles} = useContext(ArticleApiContext)
     const {data, error, loading, reload} = useLoading(listArticles)
 
@@ -26,18 +26,35 @@ export function NewsArticles() {
     }
 
     console.log(data)
-    return (
-        <div>
-            <NavBar/>
-            <div className={"news-section"}>
-                <h1>News</h1>
-                {data?.map((article) => (
-                    <Article title={article.title}
-                             category={article.category}
-                             content={article.content}
-                             auth={article.author}/>
-                ))}
+    if (user?.google !== undefined){
+        return (
+            <div>
+                <NavBarLogged/>
+                <div className={"news-section"}>
+                    <h1>News</h1>
+                    {data?.map((article) => (
+                        <Article title={article.title}
+                                 category={article.category}
+                                 content={article.content}
+                                 auth={article.author}/>
+                    ))}
+                </div>
             </div>
-        </div>
-    );
+        );
+    }else{
+        return (
+            <div>
+                <NavBar/>
+                <div className={"news-section"}>
+                    <h1>News</h1>
+                    {data?.map((article) => (
+                        <Article title={article.title}
+                                 category={article.category}
+                                 content={article.content}
+                                 auth={article.author}/>
+                    ))}
+                </div>
+            </div>
+        );
+    }
 }

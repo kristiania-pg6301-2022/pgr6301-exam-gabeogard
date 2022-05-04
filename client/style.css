@@ -56,3 +56,11 @@ body{
     margin: 10px;
     border-radius: 10px;
 }
+
+.profile{
+    background-color: #415741;
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 10px;
+}
