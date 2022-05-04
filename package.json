@@ -12,7 +12,7 @@
     "build:client": "cd client && npm run build",
     "build:server": "cd server && npm run build",
     "start": "cd server && npm start",
-    "push:both": "git push origin main && git push heroku master"
+    "pb": "git push origin main && git push heroku main"
   },
   "repository": {
     "type": "git",
