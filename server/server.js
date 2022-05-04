@@ -1,6 +1,7 @@
 import express from 'express';
 import * as path from "path";
 import {fileURLToPath} from 'url';
+import {NewsApi} from "./api/newsApi.js";
 
 
 const app = express()
@@ -17,6 +18,8 @@ app.use((req, res, next) => {
         next();
     }
 })
+
+app.use("/api/news", NewsApi())
 
 const server = app.listen(process.env.PORT || 3000, () => {
     console.log(`Server launched on http://localhost:${server.address().port}`)
