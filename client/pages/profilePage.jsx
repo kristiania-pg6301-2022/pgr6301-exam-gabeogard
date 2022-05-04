@@ -5,7 +5,7 @@ export function ProfilePage() {
         <div>
             <NavBar/>
             <div>
-                <h1>Profile</h1>
+                <h1>Profilen din</h1>
             </div>
         </div>
     );
