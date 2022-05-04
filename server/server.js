@@ -31,4 +31,5 @@ app.use("/api/login", LoginApi())
 
 const server = app.listen(process.env.PORT || 3000, () => {
     console.log(`Server launched on http://localhost:${server.address().port}`)
+    console.log(process.env.GOOGLE_CLIENT_ID)
 })
