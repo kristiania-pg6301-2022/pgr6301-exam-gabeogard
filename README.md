@@ -24,9 +24,25 @@ Dette er versjonene vi brukte under forelesningene om som er validert som ok:
 
 ## Egenutfylling av funksjonelle krav
 
-* [ ] *legg inn krav fra eksamentekst*
+* [ ] Fungerende frontend med Router
   * *beskriv eventuelle mangler eller problemer for delvis uttelling*
-* [ ] *legg inn krav fra eksamentekst*
+* [ ] Fungerende backend med kommunikasjon mellom frontend og backend
+  * *beskriv eventuelle mangler eller problemer for delvis uttelling*
+* [ ] Navigasjonsbar som hele tiden er tilgjengelig (Ikke kun navigering med back)
+  * *beskriv eventuelle mangler eller problemer for delvis uttelling*
+* [ ] Innlogging med OpenId Connect Google
+  * *beskriv eventuelle mangler eller problemer for delvis uttelling*
+* [ ] Mongo DB tilgang med artikler
+  * *beskriv eventuelle mangler eller problemer for delvis uttelling*
+* [ ] Funksjonalitet for å legge til artikler
+  * *beskriv eventuelle mangler eller problemer for delvis uttelling*
+* [ ] Funksjonalitet for å lese artikler
+  * *beskriv eventuelle mangler eller problemer for delvis uttelling*
+* [ ] Funksjonalitet for å endre / slette artikler
+  * *beskriv eventuelle mangler eller problemer for delvis uttelling*
+* [ ] Funksjonalitet for å logge inn med Active Dir
+  * *beskriv eventuelle mangler eller problemer for delvis uttelling*
+* [ ] Forskjellige type brukere har forskjellige rettigheter
   * *beskriv eventuelle mangler eller problemer for delvis uttelling*
 
 ## Egenutfylling av tekniske krav
