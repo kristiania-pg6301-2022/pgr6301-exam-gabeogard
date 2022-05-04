@@ -1,9 +1,6 @@
 import {NavBar, NavBarLogged} from "../components/TopBar";
-import {useContext} from "react";
-import {LoginApiContext} from "../apiContext/loginApiContext";
-import {useLoading} from "../misc/useLoading";
 
-export function FrontPage({user, reload}) {
+export function FrontPage({user}) {
     if (user?.google !== undefined){
         return (
             <div>

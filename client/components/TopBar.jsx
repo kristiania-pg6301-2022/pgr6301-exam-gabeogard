@@ -15,6 +15,7 @@ export const NavBarLogged = () => {
         <ul id={"nav-bar"}>
             <li className={"nav-links"} key={"home"}><Link to={"/"}>Home</Link></li>
             <li className={"nav-links"} key={"news"}><Link to={"/news"}>News</Link></li>
+            <li className={"nav-links"} key={"write-article"}><Link to={"/news/publish"}>Write article</Link></li>
             <li className={"nav-links-profile"} key={"profile"}><Link to={"/profile"}>Profile</Link></li>
         </ul>
     );

@@ -1,15 +1,16 @@
 import * as React from "react";
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {useContext} from "react";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {FrontPage} from "./pages/frontPage";
 import {ProfilePage} from "./pages/profilePage";
 import {LoginPage} from "./pages/loginPage";
 import {NewsArticles} from "./pages/newsArticles";
-import {useContext} from "react";
 import {useLoading} from "./misc/useLoading";
 import {LoginApiContext} from "./apiContext/loginApiContext";
+import {PublishPage} from "./pages/publishPage";
 
 export const Application = () => {
-    const {fetchLogin, endSession, registerLogin} = useContext(LoginApiContext)
+    const {fetchLogin} = useContext(LoginApiContext)
     const {data, error, loading, reload} = useLoading(fetchLogin);
 
     if(error){
@@ -24,6 +25,7 @@ export const Application = () => {
             <Routes>
                 <Route path={"/"} element={<FrontPage user={data?.user} reload={reload} />}/>
                 <Route path={"/news"} element={<NewsArticles user={data?.user}/>}/>
+                <Route path={"/news/publish"} element={<PublishPage user={data?.user}/>}/>
                 <Route path={"/login/*"} element={<LoginPage config={data?.config} reload={reload}/>}/>
                 <Route path={"/profile"} element={<ProfilePage user={data?.user} />}/>
             </Routes>

@@ -16,7 +16,7 @@ function Article(props) {
 
 export function NewsArticles({user}) {
     const {listArticles} = useContext(ArticleApiContext)
-    const {data, error, loading, reload} = useLoading(listArticles)
+    const {data, error, loading} = useLoading(listArticles)
 
     if (error){
         return <div>Error occurred while loading: {error.toString()}</div>
@@ -26,6 +26,7 @@ export function NewsArticles({user}) {
     }
 
     console.log(data)
+
     if (user?.google !== undefined){
         return (
             <div>
