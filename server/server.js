@@ -14,7 +14,7 @@ const app = express()
 const file = fileURLToPath(import.meta.url)
 const directory = path.dirname(file)
 app.use(bodyParser.json())
-app.use(cookieParser("oadiwawmmaowdimaadawdawdmw"))
+app.use(cookieParser(process.env.COOKIE_SECRET))
 app.use(express.static("../client/dist"))
 app.use(express.static(path.resolve(directory, "..", "client", "dist")))
 

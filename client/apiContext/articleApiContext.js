@@ -7,5 +7,8 @@ export const ArticleApiContext = React.createContext({
     },
     async createArticle(article){
         return await postJSON("/api/news", article)
+    },
+    async deleteArticle(title){
+        return await postJSON("/api/news/delete", title)
     }
 })

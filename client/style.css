@@ -1,18 +1,20 @@
-body{
+body {
     background-color: #bbbb76;
     font-family: Arial, sans-serif;
+    margin: 0;
 }
 
 
-#nav-bar{
+#nav-bar {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: darkgoldenrod;
+    position: relative;
 }
 
-.nav-links{
+.nav-links {
     float: left;
 }
 
@@ -27,7 +29,8 @@ body{
 .nav-links a:hover:not(.active) {
     background-color: darkorange;
 }
-.nav-links .active{
+
+.nav-links .active {
     background-color: darkred;
 }
 
@@ -42,7 +45,8 @@ body{
 .nav-links-profile a:hover:not(.active) {
     background-color: darkorange;
 }
-.nav-links-profile .active{
+
+.nav-links-profile .active {
     background-color: darkred;
 }
 
@@ -50,14 +54,14 @@ body{
     float: right;
 }
 
-.news-article{
+.news-article {
     background-color: #e09261;
     padding: 15px;
     margin: 10px;
     border-radius: 10px;
 }
 
-.profile{
+.profile {
     background-color: #415741;
     padding: 20px;
     margin: 5px;
@@ -65,9 +69,56 @@ body{
     border-radius: 10px;
 }
 
-.publish-article{
+.publish-article {
     background-color: #e09261;
     padding: 15px;
     margin: 10px;
     border-radius: 10px;
+    max-width: 500px;
+    text-align: left;
+    float: left;
+}
+
+textarea {
+    resize: none;
+    margin: 5px;
+}
+
+input {
+    margin: 5px;
+}
+
+.filter-section{grid-area: menu;}
+.news-section{grid-area: main}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+            'menu main main main main main'
+            'menu main main main main main';
+    gap: 10px;
+    background-color: darkred;
+    padding: 10px;
+}
+
+.grid-container > .filter-section{
+    background-color: #e09261;
+    text-align: left;
+    padding: 20px 0;
+    font-size: 15px;
+}
+
+.category_select{
+    text-align: left;
+    padding-left: 25px;
+}
+
+.category_name {
+    text-decoration: none;
+}
+
+.category_name:hover{
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
 }

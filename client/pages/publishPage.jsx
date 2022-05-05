@@ -12,6 +12,16 @@ function FormInput({label, value, onChangeValue}) {
     </div>
 }
 
+function BodyFormInput({label, value, onChangeValue}) {
+    return <div className="form-input">
+        <label>
+            <strong>{label}</strong>{" "}
+            <textarea value={value}
+                      onChange={(e) => onChangeValue(e.target.value)} rows={10} cols={50}/>
+        </label>
+    </div>
+}
+
 export function PublishPage() {
     const {createArticle} = useContext(ArticleApiContext);
     const [title, setTitle] = useState("");
@@ -29,7 +39,7 @@ export function PublishPage() {
             content,
             author
         });
-        navigate("/news")
+        window.location.href="/news"
     }
 
     return (
@@ -41,7 +51,7 @@ export function PublishPage() {
 
                 <FormInput label={"Title:"} value={title} onChangeValue={setTitle}/>
                 <FormInput label={"Category:"} value={category} onChangeValue={setCategory}/>
-                <FormInput
+                <BodyFormInput
                     label={"Article:"}
                     value={content}
                     onChangeValue={setContent}

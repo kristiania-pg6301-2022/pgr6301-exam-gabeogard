@@ -4,23 +4,50 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "dev": "nodemon server.js",
     "build": "npm install",
-    "start": "node server.js"
+    "start": "node server.js",
+    "pretest": "cross-env NODE_ENV=test npm run migrate:reset"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.15",
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^27.5.1",
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-react": "^7.16.7",
     "body-parser": "^1.20.0",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.0",
     "express": "^4.18.0",
     "mongodb": "^4.5.0",
     "node-fetch": "^3.2.4"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!dist/**",
+      "!coverage/**"
+    ]
   }
 }

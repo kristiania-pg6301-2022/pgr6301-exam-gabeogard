@@ -1,7 +1,7 @@
 import {mongoClient} from "../mongo-db/database.js";
 
-async function getArticles(req, res){
-    const movies = await mongoClient
+async function getArticles(req, res, mongoDb){
+    const articles = await mongoClient
         .db(process.env.MONGO_DATABASE)
         .collection("news-articles")
         .find()
@@ -9,10 +9,10 @@ async function getArticles(req, res){
             ({title, category, content, author}))
         .limit(100)
         .toArray()
-    return res.json(movies);
+    return res.json(articles);
 }
 
-async function createArticle(req, res){
+async function createArticle(req, res, mongoDb){
     const {title, category, content, author} = req.body
     await mongoClient
         .db(process.env.MONGO_DATABASE)
@@ -21,4 +21,19 @@ async function createArticle(req, res){
     res.sendStatus(200);
     }
 
-export {getArticles, createArticle}
+    async function deleteArticle(req, res, mongoDb){
+    const {title} = req.body
+        const result = await mongoClient
+            .db(process.env.MONGO_DATABASE)
+            .collection("news-articles")
+            .deleteOne({title: title})
+        if(result.deletedCount === 1){
+            console.log("Successfully deleted one article.")
+            res.sendStatus(200)
+        }else{
+            console.log("Could not find an article with matching title.")
+            res.sendStatus(res.status)
+        }
+    }
+
+export {getArticles, createArticle, deleteArticle}
