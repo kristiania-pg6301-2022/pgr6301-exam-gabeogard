@@ -6,3 +6,4 @@
 /client/.parcel-cache/
 /server/.env
 /server/test.js
+/server/build
