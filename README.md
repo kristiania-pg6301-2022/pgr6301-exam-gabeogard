@@ -1,4 +1,4 @@
-# PG6301 eksamen <tittel på løsningen>
+# PG6301 eksamen WEB-API PLATFORM (News website frontend and backend with api and Mongo DB)
 
 [Heroku](https://pgr6301-exam-gabeogard.herokuapp.com/)
 ## Egenutfylling av funksjonelle krav
