@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 
 import {
   createArticle,
@@ -8,11 +8,28 @@ import {
 
 export const newsApi = () => {
   const router = express.Router();
-  router.get("/", (_req, res) => res.json(getArticles));
+  router.get("/", async (req: Request, res: Response) => {
+    const articles = await getArticles();
+    console.log("articles", articles);
+    return res.json(articles);
+  });
 
-  router.post("/", createArticle);
+  router.post(
+    "/",
+    async (req: Request, res: Response) =>
+      await createArticle({
+        title: req.body.title,
+        category: req.body.category,
+        content: req.body.content,
+        author: req.body.author,
+      }),
+  );
 
-  router.post("/delete", deleteArticle);
+  router.post(
+    "/delete",
+    async (req: Request, res: Response) =>
+      await deleteArticle({ title: req.body.title }),
+  );
 
   return router;
 };

@@ -1,4 +1,3 @@
-import * as React from "react";
 import { useContext } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { FrontPage } from "./pages/frontPage";
@@ -12,8 +11,10 @@ import { PublishPage } from "./pages/publishPage";
 export const Application = () => {
   const { fetchLogin } = useContext(LoginApiContext);
   const { data, error, loading, reload } = useLoading(() => {
-    fetchLogin();
+    console.log("Fetching");
+    return fetchLogin();
   });
+  console.warn("data", data);
 
   if (error) {
     return <div>Error: {error.toString()}</div>;

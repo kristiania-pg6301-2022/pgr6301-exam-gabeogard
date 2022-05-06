@@ -15,34 +15,26 @@ jest.mock("./loginController", () => ({
 }));
 
 describe("Login Controller", () => {
-  it.skip("should call google to fetch config", (done) => {
+  it("should call google to fetch config", (done) => {
     request(app)
-      .post("/api/login/google")
-      .send({
-        access_token: "mock_access_token",
-      })
+      .get("/api/login/")
       .set({
         Accept: "application/json",
       })
-      .then(() => {
-        request(app)
-          .get("/api/login/")
-          .set({
-            Accept: "application/json",
-          })
-          .then((response) => {
-            expect(response.body).toEqual({
-              config: {
-                response_type: "token",
-                authorization_endpoint: "authorization_endpoint",
-                scope: "profile email",
-                userinfo_endpoint: "userinfo_endpoint",
-                client_id: "client_id",
-              },
-              user: { google: { user: "mockUser" } },
-            });
-            done();
-          });
+      .then((response) => {
+        expect(response.body).toEqual({
+          config: {
+            google: {
+              response_type: "token",
+              authorization_endpoint: "authorization_endpoint",
+              scope: "profile email",
+              userinfo_endpoint: "userinfo_endpoint",
+              client_id: "client_id",
+            },
+          },
+          user: {},
+        });
+        done();
       });
   });
 

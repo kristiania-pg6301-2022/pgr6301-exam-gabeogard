@@ -1,11 +1,12 @@
 import { NavBar } from "../components/TopBar";
-import * as React from "react";
+import { useContext, useEffect, useState } from "react";
 import { LoginApiContext } from "../apiContext/loginApiContext";
 import { randomString } from "../misc/randomString";
 import { useLoading } from "../misc/useLoading";
 import { Route, Routes, useNavigate, useParams } from "react-router-dom";
 
 function LoginButton({ config, label, provider }) {
+  console.log("config1", config);
   const { authorization_endpoint, response_type, scope, client_id } =
     config[provider];
   async function handleLogin() {

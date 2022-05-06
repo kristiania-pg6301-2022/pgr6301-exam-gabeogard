@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { fetchJSON } from "../misc/jsonHandler";
+import fetch from "node-fetch";
 
 interface GoogleConfig {
   response_type: string;
