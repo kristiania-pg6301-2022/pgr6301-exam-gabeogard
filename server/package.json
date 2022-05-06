@@ -6,7 +6,7 @@
     "test": "jest",
     "watch": "tsc --build --watch",
     "dev": "concurrently \"npm run watch\" \"nodemon --watch build/server.js ./build/server.js\"",
-    "build": "npm install && tsc --build",
+    "build": "npm install && node_modules/typescript/bin/tsc --build",
     "start": "tsc --build && node build/server.js"
   },
   "tsc": "./node_modules/typescript/bin/tsc",
