@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
     "incremental": true,
-    "module": "ES2022",
-    "target": "es2022",
+    "module": "commonjs",
+    "target": "es6",
     "sourceMap": false,
     "allowJs": true,
-    "checkJs": true,
+    "checkJs": false,
     "outDir": "build",
     "moduleResolution": "node",
     "resolveJsonModule": true,
