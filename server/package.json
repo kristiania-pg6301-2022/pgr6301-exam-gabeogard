@@ -9,6 +9,7 @@
     "build": "npm install && tsc --build",
     "start": "tsc --build && node build/server.js"
   },
+  "tsc": "./node_modules/typescript/bin/tsc",
   "keywords": [],
   "author": "",
   "license": "ISC",
