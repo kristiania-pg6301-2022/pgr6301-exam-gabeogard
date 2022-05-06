@@ -31,9 +31,9 @@
           </div>
 
           <div class="fl pad1y space-right2">
-            <span class="strong">69.56%</span>
+            <span class="strong">71.73%</span>
             <span class="quiet">Branches</span>
-            <span class="fraction">32/46</span>
+            <span class="fraction">33/46</span>
           </div>
 
           <div class="fl pad1y space-right2">
@@ -141,25 +141,25 @@ import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 &nbsp;
 const <span class="fstat-no" title="function not covered" ><span class="branch-1 cbranch-no" title="branch not covered" >bu</span>ildApp = () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    const app = express();<span class="cstat-no" title="statement not covered" ></span></span>
-<span class="cstat-no" title="statement not covered" >    const file = f</span>ileURLToPath(path.join("file://", __dirname));
-    const directory = path.dirname(file);
-    app.use(bodyParser.json());
-    app.use(cookieParser(process.env.COOKIE_SECRET));
-    a<span class="fstat-no" title="function not covered" ><span class="branch-1 cbranch-no" title="branch not covered" >pp</span>.use(express.static("../client/dist"));</span>
-<span class="cstat-no" title="statement not covered" >    //app.use(express.</span>static(, "..", "client", "dist")));
+  co<span class="cstat-no" title="statement not covered" >nst app = express();<span class="cstat-no" title="statement not covered" ></span></span>
+  co<span class="cstat-no" title="statement not covered" >nst file = fil</span>eURLToPath(path.join("file://", __dirname));
+  const directory = path.dirname(file);
+  app.use(bodyParser.json());
+  app.use(cookieParser(process.env.COOKIE_SECRET));
+  app<span class="fstat-no" title="function not covered" ><span class="branch-1 cbranch-no" title="branch not covered" >.u</span>se(express.static("../client/dist"));</span>
+  //<span class="cstat-no" title="statement not covered" >app.use(express.st</span>atic(, "..", "client", "dist")));
 &nbsp;
-    app.use((req, res, next) =&gt; {
-    <span class="missing-if-branch" title="if path not taken" >I</span>    if (req.method === "GET<span class="cstat-no" title="statement not covered" >" &amp;&amp; !req.pa</span>th.startsWith("/api")) {
-            res.sendFile(path.resolve("../client/dist/index.html"));
-    <span class="missing-if-branch" title="else path not taken" >E</span>    } else {<span class="missing-if-branch" title="else path not taken" >E</span>
-            next();
-        }
-    });
+  app.use((req, res, next) =&gt; {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (req.method === "GET" &amp;&amp;<span class="cstat-no" title="statement not covered" > !req.path.s</span>tartsWith("/api")) {
+      res.sendFile(path.resolve("../client/dist/index.html"));
+    <span class="missing-if-branch" title="else path not taken" >E</span>} else {<span class="missing-if-branch" title="else path not taken" >E</span>
+      next();
+    }
+  });
 &nbsp;
-    app.use("/api/news", newsApi());<span class="branch-0 cbranch-no" title="branch not covered" ></span>
-    app.use("/api/login", loginApi());
-    return app;
+  app.use("/api/news", newsApi());<span class="branch-0 cbranch-no" title="branch not covered" ></span>
+  app.use("/api/login", loginApi());
+  return app;
 };
 &nbsp;
 export default buildApp();
@@ -178,7 +178,7 @@ export default buildApp();
       >
         istanbul
       </a>
-      at Fri May 06 2022 03:01:26 GMT+0200 (Central European Summer Time)
+      at Fri May 06 2022 03:41:53 GMT+0200 (Central European Summer Time)
     </div>
     <script src="../prettify.js"></script>
     <script>

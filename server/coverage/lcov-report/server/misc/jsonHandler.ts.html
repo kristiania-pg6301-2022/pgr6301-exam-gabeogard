@@ -117,25 +117,25 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import fetch from "node-fetch";
 &nbsp;
 export const postJSON = async (url: string, object: unkn<span class="branch-0 cbranch-no" title="branch not covered" >own) =</span>&gt; {
-    const res = await fetch(url, {
-        method: "POST",
-        headers: <span class="fstat-no" title="function not covered" >{<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span>
-            "content-type": "application/json"<span class="branch-0 cbranch-no" title="branch not covered" ></span>
-        },
-        body: JSON.stringify(object)
-    })
-    if (!res.ok) {
-        throw new Error(`Failed to po<span class="branch-0 cbranch-no" title="branch not covered" >st $</span>{res.status}: ${res.statusText}`)
-    }
-}
+  const res = await fetch(url, {
+    method: "POST",
+    headers: {<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span>
+      "content-type": "application/json",<span class="branch-0 cbranch-no" title="branch not covered" ></span>
+    },
+    body: JSON.stringify(object),
+  });
+  if (!res.ok) {
+    throw new Error(`Failed to post $<span class="branch-0 cbranch-no" title="branch not covered" >{res</span>.status}: ${res.statusText}`);
+  }
+};
 &nbsp;
-export const fetchJSON = async &lt;T extends unknown&gt; (url: string) =&gt; {
-    const res = await fetch(url);
-    if (!res.ok) {
-        throw new Error(`Failed to fetch ${res.status}: ${res.statusText}`);
-    }
-    return res.json() as T;
-}
+export const fetchJSON = async &lt;T extends unknown&gt;(url: string) =&gt; {
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error(`Failed to fetch ${res.status}: ${res.statusText}`);
+  }
+  return res.json() as T;
+};
 &nbsp;</pre></td></tr></table></pre>
 
       <div class="push"></div>
@@ -151,7 +151,7 @@ export const fetchJSON = async &lt;T extends unknown&gt; (url: string) =&gt; {
       >
         istanbul
       </a>
-      at Fri May 06 2022 03:01:26 GMT+0200 (Central European Summer Time)
+      at Fri May 06 2022 03:41:53 GMT+0200 (Central European Summer Time)
     </div>
     <script src="../../prettify.js"></script>
     <script>

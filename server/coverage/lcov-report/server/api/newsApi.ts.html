@@ -25,27 +25,27 @@
         </h1>
         <div class="clearfix">
           <div class="fl pad1y space-right2">
-            <span class="strong">92.85%</span>
+            <span class="strong">42.42%</span>
             <span class="quiet">Statements</span>
-            <span class="fraction">13/14</span>
+            <span class="fraction">14/33</span>
           </div>
 
           <div class="fl pad1y space-right2">
-            <span class="strong">85.71%</span>
+            <span class="strong">50%</span>
             <span class="quiet">Branches</span>
-            <span class="fraction">6/7</span>
+            <span class="fraction">9/18</span>
           </div>
 
           <div class="fl pad1y space-right2">
-            <span class="strong">66.66%</span>
+            <span class="strong">13.33%</span>
             <span class="quiet">Functions</span>
-            <span class="fraction">2/3</span>
+            <span class="fraction">2/15</span>
           </div>
 
           <div class="fl pad1y space-right2">
-            <span class="strong">100%</span>
+            <span class="strong">58.33%</span>
             <span class="quiet">Lines</span>
-            <span class="fraction">13/13</span>
+            <span class="fraction">14/24</span>
           </div>
         </div>
         <p class="quiet">
@@ -68,7 +68,7 @@
           </div>
         </template>
       </div>
-      <div class="status-line high"></div>
+      <div class="status-line low"></div>
       <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -88,7 +88,25 @@
 <a name='L16'></a><a href='#L16'>16</a>
 <a name='L17'></a><a href='#L17'>17</a>
 <a name='L18'></a><a href='#L18'>18</a>
-<a name='L19'></a><a href='#L19'>19</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -99,30 +117,39 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import express from "express";
-&nbsp;
-import {<span class="branch-0 cbranch-no" title="branch not covered" ></span>
-  createArticle,
-  getArticles,
-  deleteArticle,
-} from "../controllers/articleController";
-&nbsp;
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import express, { Request, Response } from "express";
+<span class="fstat-no" title="function not covered" ></span>
+import {<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span>
+  cr<span class="cstat-no" title="statement not covered" >eateArticle,<span class="fstat-no" title="function not covered" ></span></span>
+  getArticles,<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span>
+  deleteArticle,<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span>
+} from "../contro<span class="fstat-no" title="function not covered" >llers</span>/articleCo<span class="cstat-no" title="statement not covered" >ntroller";</span>
+<span class="cstat-no" title="statement not covered" ></span>
 export const newsApi = () =&gt; {
   const router = express.Router();
-  router.get("/", (_<span class="fstat-no" title="function not covered" >re</span>q, res) =&gt; re<span class="cstat-no" title="statement not covered" >s.json(getArticles));</span>
+  router.get("/", async (req: Request, res: Response) =&gt; {
+    const articles = await getArticle<span class="branch-0 cbranch-no" title="branch not covered" >s();</span>
+    console.log("articles", articles);
+    return res.json(articles);
+  });
 &nbsp;
-  router.post("/", createArticle);
-&nbsp;
-  router.post("/delete", deleteArticle);
-&nbsp;
-  return router;
+  router.post("/", async (req: Request, res: Response) =&gt; await createArticle({
+    title: req.body.title,
+    category: req.body.category,
+    content: req.bod<span class="fstat-no" title="function not covered" >y.</span>content,<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+    author: req.body.auth<span class="cstat-no" title="statement not covered" >or,</span>
+  }));<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+  router.post("/delete", async (req: Request, res: Response) =&gt; await deleteArticle({ title: req.body.title }));
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ></span></span></span>
+  return<span class="cstat-no" title="statement not covered" > router;</span>
 };
 &nbsp;</pre></td></tr></table></pre>
 
@@ -139,7 +166,7 @@ export const newsApi = () =&gt; {
       >
         istanbul
       </a>
-      at Fri May 06 2022 03:01:26 GMT+0200 (Central European Summer Time)
+      at Fri May 06 2022 03:41:53 GMT+0200 (Central European Summer Time)
     </div>
     <script src="../../prettify.js"></script>
     <script>
